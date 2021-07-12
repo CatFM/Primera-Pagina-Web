@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto|AlienBook</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,
+    maximum-scale=3.0, minimun-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+    <body>
+        <header class="main-header">
+            <div class="container container--flex">
+                <div class="logo-container column column--50">
+                    <h1 class="logo">AlienBook</h1>
+                </div>
+                <div class="main-header__contactInfo column column--50">
+                    <p class="main-header__contactInfo__phone">
+                        <i class="fas fa-phone" ></i> <span>3146325295</span>
+                    </p>
+                    <p class="main-header__contactInfo__mail">
+                        <i class="fas fa-envelope"></i> <span>c.fajardo@utp.edu.co</span>
+                    </p> 
+                </div>
+            </div>
+        </header>
+        <nav class="main-nav">
+            <div class="container container--flex">
+                <snap class="fas fa-ellipsis-h" id="btnmenu"></snap>
+                <ul class="menu" id="menu">
+                    <li class="menu__item"><a href="index.html" class="menu__link ">Inicio</a></li>
+                    <li class="menu__item"><a href="nosotros.html" class="menu__link ">Nosotros</a></li>
+                    <li class="menu__item"><a href="listaEjemplares.html" class="menu__link">Lista de ejemplares</a></li>
+                    <li class="menu__item"><a href="contacto.html" class="menu__link menu__link--select">Contacto</a></li>
+                </ul>
+                <div><i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-facebook-square"></i> 
+
+                </div> 
+            </div>
+        </nav>
+       <section class="banner">
+           <img src="Imagenes/pexels-miriam-espacio-365625 (1).jpg" alt="" class="banner__img">
+           <div class="banner__content">No dudes en escribirnos</div>
+       </section>
+
+
+        <main class="main">
+            <section class="group contact">
+                <h2 class="group__title">Contáctanos</h2>
+                <div class="container container--flex">
+                    <div class="contact-information column column--50">
+                        <h3 class="column__title">Información de contacto</h3>
+                        <p class="column__txt">Para nosostros es un grato placer atenderte y asesorarte en lo que requieras, puedes usar los medios de comunicación disponibles o dejarnos un mensaje, cualquiera de nuestros asesores te contestará lo más pronto posible</p>
+                        <p class="column__txt"><i class="fas fa-phone-alt"></i>Teléfono 1: 847-945-374</p>
+                        <p class="column__txt"><i class="fas fa-phone-alt"></i>Teléfono 2: 235-456-098</p>
+                        <p class="column__txt"><i class="fas fa-map-marked"></i>Av. 69 Los montes 420 - Monterrey,México</p>
+                        <p class="column__txt"><i class="fas fa-envelope"></i>alienbook@gmail.com</p>
+                    </div>
+                    <form action="" method="POST" class="formulario column column--50">
+                        <label for="" class="formulario__label">Nombre: </label>
+                        <input type="text" class="formulario__input-txt" name="nombreC">
+                        <label for="" class="formulario__label">Correo: </label>
+                        <input type="text" class="formulario__input-txt" name="correoC">
+                        <label for="" class="formulario__label">Teléfono (con indicativos): </label>
+                        <input type="text" class="formulario__input-txt" name="telefonoC">
+                        <label for="" class="formulario__label">Mensaje: </label>
+                        <textarea name="mensajeC" id="" cols="30" rows="10" class="formulario__textarea"></textarea>
+                    
+                    
+                </form>
+                <button onclick="AgregarC()" class="btn formularo__btn">Agregar
+                </button>
+                <button onclick="EliminarC()" class="btn formularo__btn">Eliminar
+                </button>
+                <button onclick="BuscarC()" class="btn formularo__btn">Buscar
+                </button>
+                </div>
+            </section>
+        </main>
+
+
+        <footer class="main-footer">
+            <div class="container container--flex">
+                <div class="column column--33">
+                   <h2 class="column__title">Hacemos envios a:</h2>
+                   <p class="column__txt">Colombia-México-Ecuador-Chile-Argentina-Panamá-Puerto Rico</p>
+                </div>
+                <div class="column column--33">
+                    <h2 class="column__title">Contactanos</h2>
+                    <p class="column__txt">Teléfono: (036)558-4563</p>
+                    <p class="column__txt">Línea internacional: (01)1011110101</p>
+                    <p class="column__txt">Correo: alienbook@gmail.com</p>
+                </div>
+                <div class="column column--33">
+                    <h2 class="column__title">Siguenos en nuestras redes sociales</h2>
+                    <p class="column__txt"><i class="fab fa-instagram-square"></i> <span>AlienBook69</span></p>
+                    <p class="column__txt"><i class="fab fa-facebook-square"></i> <span>AlienBook69</span></p>
+                </div>
+                <p class="copy">2021 AlienBook | Todos los derechos reservados</p>
+            </div>
+        </footer>
+        <script src="js/menu.js"></script>
+        <script src="js/op_vectores.js"></script>
+
+        <!-- <script>
+            function AgregarC(){
+                console.log('Ana');
+            }
+        </script> -->
+    </body>
+</html>
