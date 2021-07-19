@@ -94,16 +94,17 @@ class LinkedList{
         return this.size;
     };
 
-    buscar(data){
-        let current = this.head;
-        let index = 0;
-        while(current){
-            if(current.data===data){
-                return index;
-            };
-            index++;
-            current = current.next;
-        };
-        return -1;
-    };
-};
+    buscar(valor){
+        let elemento = this.primero;
+        
+        if (!elemento) 
+        return null;
+     
+        while ((elemento = elemento.siguiente)) {
+          if (elemento.valor === valor) {
+            return elemento;
+          }
+        }
+        return null;
+        }
+}

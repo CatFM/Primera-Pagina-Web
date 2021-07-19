@@ -5,6 +5,8 @@ const linkedList = new LinkedList();
 const linkedList2 = new LinkedList();
 const linkedList3 = new LinkedList();
 
+
+
 function Agregar(){
     // console.log('Recibir');
     var nombre = document.getElementsByName('nombre')[0].value;
@@ -27,10 +29,13 @@ function Eliminar(){
     
 };
 
+
+
 function Buscar(){
-    var nombre = document.getElementsByName('buscar')[0].value;
-    console.log(nombre);
-    linkedList.buscar(nombre);
+    var buscar = document.getElementsByName('buscar')[0].value;
+   const elemento = linkedList.buscar(buscar);
+    console.log(elemento.valor);
+    
 };
 
 

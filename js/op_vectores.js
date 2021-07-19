@@ -100,11 +100,81 @@ if (localStorage.getItem("mensajes")!= null) {
 
 function BuscarC() {
     var nombreC = document.getElementsByName('nombreC')[0].value;
-
     let Buscar = nombres.includes(nombreC);
+console.log(Buscar);
 
-console.log(Buscar)
 }
+    
+    function Ordenar() {
+       
+        //Ordena 2 elementos
+        function ordena(items, leftIndex, rightIndex){
+            var temp = items[leftIndex];
+            items[leftIndex] = items[rightIndex];
+            items[rightIndex] = temp;
+        }
+        //Parte el vector en dos
+        function partes(items, left, right) {
+            var pivot   = items[Math.floor((right + left) / 2)];
+                i       = left;
+                j       = right; 
+            while (i <= j) {
+                while (items[i] < pivot) {
+                    i++;
+                }
+                while (items[j] > pivot) {
+                    j--;
+                }
+                if (i <= j) {
+                    ordena(items, i, j); 
+                    i++;
+                    j--;
+                }
+            }
+            return i;
+        }
+        
+        //Une las dos partes ordenandolas
+        function quickSort(items, left, right) {
+            var index;
+            if (items.length > 1) {
+                index = partes(items, left, right); 
+                if (left < index - 1) { 
+                    quickSort(items, left, index - 1);
+                }
+                if (index < right) { 
+                    quickSort(items, index, right);
+                }
+            }
+            return items;
+        }
+        //Ponerlo en pantalla
+         //NOMBRES
+        var nombresordenados = quickSort(nombres, 0, nombres.length - 1);
+        console.log(nombresordenados);
+        //TELEFONOS
+        var telefonosordenados = quickSort(telefonos, 0, telefonos.length - 1);
+        console.log(telefonosordenados);
+        //CORREOS
+        var correosordenados = quickSort(correos, 0, correos.length - 1);
+        console.log(correosordenados);
+
+        console.time('loop');
+        var nombresordenados = quickSort(nombres, 0, nombres.length - 1);
+        console.log('El tiempo que tardó en organizar los nombres:');
+        console.timeEnd('loop');
+
+        console.time('loop');
+        var telefonosordenados = quickSort(telefonos, 0, telefonos.length - 1);
+        console.log('El tiempo que tardó en organizar los telefonos:');
+        console.timeEnd('loop');
+
+        console.time('loop');
+        var correosordenados = quickSort(correos, 0, correos.length - 1);
+        console.log('El tiempo que tardó en organizar los correos:');
+        console.timeEnd('loop');
+    }
+    
 
 
 
